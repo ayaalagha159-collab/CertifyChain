@@ -1,0 +1,17 @@
+{
+  "users": [
+    {
+      "email": "issuer@example.com",
+      "password": "issuer123",
+      "role": "issuer",
+      "name": "المُصدِّر"
+    },
+    {
+      "email": "admin@example.com",
+      "password": "admin123",
+      "role": "admin",
+      "name": "مدير النظام"
+    }
+  ],
+  "certificates": []
+}
