@@ -1,1 +1,96 @@
-body{margin:0;font-family:system-ui,-apple-system,Segoe UI,Roboto,'Cairo',Tahoma,Arial;background:#0f172a;color:#e5e7f0}.container{max-width:1100px;margin:20px auto;padding:12px}.card{background:#111827;border-radius:14px;padding:18px;box-shadow:0 10px 20px rgba(0,0,0,.25);margin-bottom:14px}.row{display:grid;gap:12px}.grid-2{grid-template-columns:1fr 1fr}.input,button{width:100%;padding:12px;border-radius:10px;border:1px solid #1f2937;background:#0b1220;color:#e5e7eb}button{background:#2563eb;cursor:pointer;font-weight:700}.nav{display:flex;gap:8px;align-items:center;justify-content:space-between;margin-bottom:14px}.nav a{color:#e5e7eb;text-decoration:none;margin-inline:6px}.badge{display:inline-block;background:#064e3b;color:#a7f3d0;padding:2px 8px;border-radius:8px;font-size:12px}.table{width:100%;border-collapse:collapse}.table th,.table td{padding:10px;border-bottom:1px solid #1f2937;text-align:right}.note{color:#9ca3af;font-size:13px}.hide{display:none}
+/* ========= CertifyChain — Friend Edition (Light/Glass) ========= */
+:root{
+  --bg:#f3f6fb;
+  --card:#ffffffcc;       /* glass effect */
+  --text:#0f172a;
+  --muted:#6b7280;
+  --primary:#6d28d9;      /* Purple */
+  --primary-2:#7c3aed;
+  --line:#e5e7eb;
+  --chip:#eef2ff;
+  --chip-text:#3730a3;
+  --input:#ffffff;
+  --shadow:0 10px 30px rgba(17,24,39,.08);
+}
+
+*{box-sizing:border-box}
+html,body{height:100%}
+body{
+  margin:0;
+  font-family: ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Cairo", Tahoma, Arial;
+  background: radial-gradient(1000px 600px at 10% -10%, #ede9fe 0%, transparent 40%),
+              radial-gradient(900px 600px at 110% 10%, #e0f2fe 0%, transparent 45%),
+              var(--bg);
+  color:var(--text);
+}
+
+/* Layout */
+.container{max-width:1100px;margin:28px auto;padding:0 16px}
+.card{
+  background:var(--card);
+  backdrop-filter:blur(10px);
+  border:1px solid var(--line);
+  border-radius:16px;
+  padding:20px;
+  box-shadow:var(--shadow);
+  margin-bottom:16px;
+}
+
+/* Top bar */
+.nav{
+  display:flex;align-items:center;justify-content:space-between;gap:12px;margin-bottom:16px
+}
+.brand{
+  display:flex;align-items:center;gap:10px;font-weight:800;font-size:18px
+}
+.logo{
+  width:36px;height:36px;border-radius:10px;
+  display:grid;place-items:center;
+  background:linear-gradient(135deg,var(--primary),var(--primary-2));
+  color:#fff;font-weight:900
+}
+.nav a{
+  color:var(--text);text-decoration:none;margin-inline:8px;font-weight:600;
+  padding:8px 12px;border-radius:10px;border:1px solid transparent;
+}
+.nav a:hover{background:#ffffff80;border-color:var(--line)}
+#who{color:var(--muted);font-size:13px}
+
+/* Grid & controls */
+.row{display:grid;gap:12px}
+.grid-2{grid-template-columns:1fr 1fr}
+@media (max-width:700px){.grid-2{grid-template-columns:1fr}}
+
+.input,button{
+  width:100%;padding:12px;border-radius:12px;border:1px solid var(--line);
+  background:var(--input);color:var(--text);outline:none;
+}
+.input:focus{border-color:var(--primary);box-shadow:0 0 0 3px #8b5cf626}
+
+button{
+  cursor:pointer;font-weight:800;letter-spacing:.2px;
+  background:linear-gradient(135deg,var(--primary),var(--primary-2));
+  color:#fff;border:none;transition:transform .05s ease-in, filter .15s;
+}
+button:hover{filter:brightness(1.03)}
+button:active{transform:translateY(1px)}
+
+/* Table */
+.table{width:100%;border-collapse:separate;border-spacing:0 8px}
+.table th{font-size:13px;color:var(--muted);font-weight:700;text-align:right;padding:6px 10px}
+.table td{
+  background:var(--card);border:1px solid var(--line);padding:12px 10px;
+}
+.table tr td:first-child{border-radius:10px 0 0 10px}
+.table tr td:last-child{border-radius:0 10px 10px 0}
+
+/* Bits */
+.badge{
+  display:inline-block;background:var(--chip);color:var(--chip-text);
+  padding:4px 10px;border-radius:999px;font-size:12px;font-weight:700
+}
+.note{color:var(--muted);font-size:13px}
+.hide{display:none}
+
+/* Section headings */
+h2{margin:0 0 14px 0;font-size:22px}

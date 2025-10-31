@@ -1,1 +1,96 @@
-<!doctype html><html lang="ar" dir="rtl"><head><meta charset="utf-8"/><meta name="viewport" content="width=device-width, initial-scale=1"/><title>منصة توثيق الشهادات</title><link rel="stylesheet" href="style.css"/></head><body><div class="container"><div class="nav"><div><a href="/">الرئيسية</a><a href="#" onclick="showSection('issue')">إصدار شهادة</a><a href="#" onclick="showSection('list')">قائمة الشهادات</a><a href="#" onclick="showSection('verify')">تحقق</a></div><div id="who"></div><div><a id="loginLink" href="/login.html">تسجيل الدخول</a><a href="#" onclick="logout()">تسجيل الخروج</a></div></div><section id="issue" class="card"><h2>إصدار شهادة</h2><div class="row grid-2"><input id="title" class="input" placeholder="عنوان الشهادة (مثلاً: بكالوريوس)"/><input id="student" class="input" placeholder="اسم الطالب"/><input id="date" class="input" type="date"/><input id="issuer" class="input" placeholder="الجهة المُصدِّرة" readonly/></div><div style="margin-top:10px"><button onclick="issue()">إصدار</button><span class="note">سيظهر الإصدار في القائمة</span></div></section><section id="list" class="card"><h2>قائمة الشهادات</h2><table class="table"><thead><tr><th>إجراء</th><th>الحالة</th><th>العنوان</th><th>الاسم</th><th>الرقم</th></tr></thead><tbody id="tbody"></tbody></table></section><section id="verify" class="card"><h2>تحقق من شهادة</h2><div class="row grid-2"><input id="verifyId" class="input" placeholder="رقم الشهادة (ID)"/><button onclick="verify()">تحقق</button></div><div id="verifyBox" class="card hide" style="margin-top:12px"></div></section></div><script src="app.js"></script></body></html>
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>منصة توثيق الشهادات</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+
+  <body>
+    <div class="container">
+      
+      <div class="nav">
+  <div class="brand">
+    <div class="logo">C✓</div>
+    <div>منصة توثيق الشهادات</div>
+  </div>
+  <div>
+    <a href="/">الرئيسية</a>
+    <a href="#" onclick="showSection('issue')">إصدار شهادة</a>
+    <a href="#" onclick="showSection('list')">قائمة الشهادات</a>
+    <a href="#" onclick="showSection('verify')">تحقق</a>
+  </div>
+  <div id="who"></div>
+  <div>
+    <a id="loginLink" href="/login.html">تسجيل الدخول</a>
+    <a href="#" onclick="logout()">تسجيل الخروج</a>
+  </div>
+</div>
+
+
+      <!-- ✅ قسم إصدار الشهادة -->
+      <section id="issue" class="card">
+        <h2>إصدار شهادة</h2>
+
+        <div class="row grid-2">
+          <input
+            id="title"
+            class="input"
+            placeholder="عنوان الشهادة (مثلاً: بكالوريوس)"
+          />
+          <input id="student" class="input" placeholder="اسم الطالب" />
+          <input id="date" class="input" type="date" />
+          <input
+            id="issuer"
+            class="input"
+            placeholder="الجهة المُصدِّرة"
+            readonly
+          />
+        </div>
+
+        <div style="margin-top: 10px">
+          <button onclick="issue()">إصدار</button>
+          <span class="note">سيظهر الإصدار في القائمة</span>
+        </div>
+      </section>
+
+      <!-- ✅ قسم قائمة الشهادات -->
+      <section id="list" class="card">
+        <h2>قائمة الشهادات</h2>
+        <table class="table">
+          <thead>
+            <tr>
+              <th>إجراء</th>
+              <th>الحالة</th>
+              <th>العنوان</th>
+              <th>الاسم</th>
+              <th>الرقم</th>
+            </tr>
+          </thead>
+          <tbody id="tbody"></tbody>
+        </table>
+      </section>
+
+      <!-- ✅ قسم التحقق من الشهادة -->
+      <section id="verify" class="card">
+        <h2>تحقق من شهادة</h2>
+
+        <div class="row grid-2">
+          <input
+            id="verifyId"
+            class="input"
+            placeholder="رقم الشهادة (ID)"
+          />
+          <button onclick="verify()">تحقق</button>
+        </div>
+
+        <div id="verifyBox" class="card hide" style="margin-top: 12px"></div>
+      </section>
+
+    </div>
+
+    <!-- ✅ سكريبت التطبيق -->
+    <script src="app.js"></script>
+  </body>
+</html>

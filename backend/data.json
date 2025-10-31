@@ -13,5 +13,14 @@
       "name": "مدير النظام"
     }
   ],
-  "certificates": []
+  "certificates": [
+    {
+      "id": "c8c42af0",
+      "studentName": "دعاء يوسف ابو جامع",
+      "title": "بكالوريس",
+      "issueDate": "2025-10-31",
+      "issuer": "المُصدِّر",
+      "status": "صالح"
+    }
+  ]
 }
